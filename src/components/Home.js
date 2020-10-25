@@ -12,7 +12,7 @@ export default function Home() {
     "Click the button below to upload your first video.";
 
   const { data: { videosInDb = [] } = {} } = useQuery(LOAD_VIDEOS);
-  console.log("Priya" + videosInDb);
+  
   if (videosInDb.length > 0) {
     appBody = videosInDb.map((video) => (
       <div className="column is-half" key={video.file}>

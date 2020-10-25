@@ -5,7 +5,7 @@ const LOCAL_STORE =  __dirname + '/videoStore/';
 const data = {
   showVideos() {
     const videos = readdirSync(LOCAL_STORE)
-    console.log(LOCAL_STORE+"--> storage name")
+    
     return videos.map(videoFile => ({
       filename: videoFile,
       path: `${GRAPHQL_ENDPOINT}/videoStore/${videoFile}`,
